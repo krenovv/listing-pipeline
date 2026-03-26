@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6a027a9-5c81-4136-888a-4f1bcd226778" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/listing_pipeline.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/bank_parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/formatter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/image_pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/tag_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/interactive.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/datetime_tools.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/deals_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integrations/airtable/mesh_sync.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/console.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/lots_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/interactive.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/interactive.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +50,17 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Dev/Projects/listing_pipeline",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Dev\Projects\listing_pipeline" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="listing_pipeline" />
@@ -113,7 +108,9 @@
       <option name="presentableId" value="Default" />
       <updated>1774351935125</updated>
       <workItem from="1774351936266" duration="9348000" />
-      <workItem from="1774364938133" duration="1829000" />
+      <workItem from="1774364938133" duration="2482000" />
+      <workItem from="1774429979698" duration="178000" />
+      <workItem from="1774433094741" duration="7213000" />
     </task>
     <servers />
   </component>
@@ -122,6 +119,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/listing_pipeline$cli.coverage" NAME="cli Coverage Results" MODIFIED="1774353806219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaces" />
-    <SUITE FILE_PATH="coverage/listing_pipeline$main.coverage" NAME="main Coverage Results" MODIFIED="1774365475723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/listing_pipeline$main.coverage" NAME="main Coverage Results" MODIFIED="1774537041459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

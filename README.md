@@ -1,6 +1,6 @@
 # Listing Pipeline
 
-Automation toolkit for marketplace workflows, including listing creation, scheduling, and payment processing.
+Automation toolkit for marketplace workflows, including listing creation, payment processing, and content preparation.
 
 > Built to automate a real workflow with 500–800 listings per week on the Meshok marketplace.
 
@@ -8,24 +8,43 @@ Automation toolkit for marketplace workflows, including listing creation, schedu
 
 ## Overview
 
-Listing Pipeline is a system designed to automate repetitive tasks in marketplace operations.
+Listing Pipeline is a modular system designed to automate repetitive operations in marketplace workflows.
 
-It was developed for a real-world workflow on the Meshok platform, covering not only listing creation, but also related operational tasks such as payment tracking and content handling.
+It was developed for a real-world process on the Meshok platform and covers not only listing creation, but also related tasks such as payment tracking, data processing, and content preparation.
 
-The system focuses on speed, reducing manual work, and making the workflow predictable and consistent.
+The system focuses on speed, consistency, and reducing manual work.
 
 ---
 
 ## Features
 
-- Title formatting based on inconsistent raw input  
-- Automatic tag generation (SEO-oriented)  
-- Listing time scheduling for auction workflows  
+### Listing Automation
+- Title formatting from inconsistent raw input  
+- Tag generation (SEO-oriented)  
+- Sequential listing time scheduling  
 - Lot parsing from copied marketplace content  
-- Payment processing support (bank statement parsing)  
-- Bulk image handling for listing creation  
-- Interactive workflow mode (Enter-driven)  
-- Clipboard integration for minimal manual input  
+
+### Financial Processing
+- Parsing bank statements (PDF / text) from multiple banks  
+- Unified transaction model  
+- Search by amount  
+- Filtering by date  
+- Aggregation by account  
+
+### Data Processing
+- Parsing deal lists and aggregating sums by buyer  
+- Clipboard-based workflow for fast operations  
+
+### Content Preparation
+- Certificate text generation for CorelDRAW  
+- Bulk image workflow using browser automation (Tampermonkey)  
+
+### Integration
+- Airtable synchronization (automatic title + image extraction from Meshok links)  
+
+### Workflow
+- Interactive console interface  
+- Clipboard-driven operations (minimal manual input)  
 
 ---
 
@@ -33,43 +52,42 @@ The system focuses on speed, reducing manual work, and making the workflow predi
 
 The project follows a modular structure:
 
-- **core/** — business logic (formatting, parsing, tags, data processing)  
-- **interfaces/** — CLI and interactive interface  
-- **tools/**  — auxiliary user tools (e.g. AHK macros) for workflow acceleration
-- **utils/** — reusable components (time generator, helpers)
+- **core/** — business logic (formatting, parsing, tags, certificates)  
+- **services/** — data processing (bank operations, deal aggregation)  
+- **integrations/** — external services (Airtable)  
+- **utils/** — shared utilities  
+- **interfaces/** — CLI and interactive workflow  
+- **tools/** — auxiliary tools (e.g. browser automation scripts)  
 
 ---
 
 ## Workflow
 
-The system is optimized for fast repetitive processing:
+Optimized for fast repetitive operations:
 
-1. Copy raw title  
-2. Press Enter > formatted title (copied to clipboard)  
-3. Press Enter > next listing time  
-4. Press Enter > generated tags  
-5. Repeat for next item  
-
-Additional modules support payment verification and content preparation.
+1. Copy raw data (title, deals, bank data, etc.)  
+2. Run the corresponding module  
+3. Result is automatically copied to clipboard  
+4. Paste into target system  
 
 ---
 
 ## Why this project
 
-The project was created to solve practical problems in a real workflow:
+The project was created to solve real operational problems:
 
-- Raw data (titles, descriptions) was inconsistent and required manual cleanup  
-- Listing hundreds of items per week was time-consuming  
-- Payment verification required manual search across multiple bank accounts  
-- Uploading images was slow and repetitive  
+- Inconsistent raw data required manual cleanup  
+- Managing hundreds of listings per week was time-consuming  
+- Payment verification required manual search across multiple banks  
+- Image uploads and content preparation were slow  
 
-Listing Pipeline automates these processes, reduces manual effort, and significantly speeds up daily operations.
+Listing Pipeline automates these processes and makes the workflow faster, more consistent, and easier to manage.
 
 ---
 
 # Listing Pipeline (RU)
 
-Система автоматизации процессов работы с маркетплейсами: создание лотов, планирование, обработка платежей и подготовка контента.
+Система автоматизации процессов работы с маркетплейсами: создание лотов, обработка платежей и подготовка контента.
 
 > Создано для реального сценария с 500–800 лотами в неделю на площадке Мешок.
 
@@ -77,48 +95,69 @@ Listing Pipeline automates these processes, reduces manual effort, and significa
 
 ## Описание
 
-Listing Pipeline — это инструмент для автоматизации рутинных операций в работе с маркетплейсами.
+Listing Pipeline — это модульная система для автоматизации рутинных операций при работе с маркетплейсами.
 
-Он был разработан под реальный процесс на площадке Мешок и охватывает не только создание лотов, но и сопутствующие задачи: обработку платежей и работу с контентом.
+Проект разработан на основе реального процесса и охватывает:
+- создание лотов  
+- обработку платежей  
+- подготовку контента  
+- работу с данными  
 
-Основная цель — ускорение работы, снижение ручного труда и повышение стабильности процесса.
+Основная цель — ускорение работы, снижение количества ручных операций и повышение стабильности процесса.
 
 ---
 
 ## Возможности
 
-- Форматирование названий из "сырого" ввода  
+### Работа с лотами
+- Форматирование названий  
 - Генерация тегов  
 - Планирование времени публикации  
-- Парсинг лотов из скопированного текста  
-- Обработка банковских операций (по выпискам)  
-- Массовая работа с изображениями
+- Парсинг списка лотов  
+
+### Финансы
+- Парсинг банковских выписок (PDF / TXT)  
+- Поиск операций по сумме  
+- Фильтрация по дате  
+- Агрегация по аккаунтам  
+
+### Обработка данных
+- Парсинг сделок и суммирование по покупателям  
+
+### Подготовка контента
+- Генерация текста для сертификатов  
+- Массовая работа с изображениями (через Tampermonkey)  
+
+### Интеграции
+- Синхронизация с Airtable  
+
+### Интерфейс
+- Интерактивный консольный режим  
+- Работа через буфер обмена  
 
 ---
 
 ## Архитектура
 
-Проект построен модульно:
+Проект разделён на модули:
 
 - **core/** — бизнес-логика  
-- **interfaces/** — интерфейсы взаимодействия
-- **tools/** — вспомогательные инструменты  
-- **utils/** — утилиты  
-
+- **services/** — обработка данных  
+- **integrations/** — внешние сервисы  
+- **utils/** — вспомогательные функции  
+- **interfaces/** — интерфейс  
+- **tools/** — дополнительные инструменты  
 
 ---
 
 ## Workflow
 
-Оптимизирован под быстрый цикл работы:
+Работа строится в быстром цикле:
 
-1. Скопировать сырое название  
-2. Enter > получить отформатированное название  
-3. Enter > получить время публикации  
-4. Enter > получить теги  
-5. Повторить  
-
-Дополнительные модули используются для проверки оплат и подготовки изображений.
+1. Скопировать данные  
+2. Запустить нужный модуль  
+3. Получить результат (в буфере обмена)  
+4. Вставить в нужную систему  
 
 ---
 
@@ -126,10 +165,9 @@ Listing Pipeline — это инструмент для автоматизаци
 
 В исходном процессе:
 
-- названия приходили в разном формате  
-- требовалась ручная правка  
-- выставление сотен лотов занимало много времени  
-- проверка оплат занимала много времени из-за нескольких банков  
-- загрузка изображений была медленной и неудобной  
+- данные приходили в разном формате  
+- требовалась ручная обработка  
+- работа с платежами занимала много времени  
+- загрузка изображений была неудобной  
 
-Система автоматизирует эти шаги и делает процесс быстрее, понятнее и устойчивее.
+Система автоматизирует эти задачи и делает процесс быстрее, понятнее и устойчивее.
